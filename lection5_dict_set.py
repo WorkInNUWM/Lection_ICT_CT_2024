@@ -47,7 +47,45 @@ print(books.setdefault("Kurt","Error!"))
 print(books.setdefault("Franko","Error!"))
 print(my_library)
 
+
+
+
+
+# set-unmutable
+set1=set("Python is script lang")
+print(set1)
+
+set2=set(books)
+for author in books:
+    print(author)
+print(set2)
+
+for book in books.items():
+    print(book)
+set3=set(books.keys())
+# set3=set(books.values()) # if value is structure =>  error 
+# set3=set(books.items()) # error
+print(set3)
+print(list(books.items()))
+print(list(books.values())) 
+print(list(books.keys()))
+
 import random
-list_number=[random.randint(1,11) for _ in range(20)]
-print(list_number)
-print(set(list_number))
+list_number1=[random.randint(1,11) for _ in range(20)]
+print(f'list_number1={list_number1}')
+set_number1=set(list_number1)
+print(f'set_number1={set_number1}')
+
+list_number2=[random.randint(1,11) for _ in range(20)]
+print(f'list_number2={list_number2}')
+set_number2=set(list_number2)
+print(f'set_number2={set_number2}')
+
+print(len(set_number1))
+print(set_number1.isdisjoint(set_number2)) 
+print(set_number1==set_number2) 
+print(set_number1.issubset(set_number2)) #   <=>  "<=" 
+print(set_number1.issuperset(set_number2)) #   <=>  ">=" 
+print(set_number1.union(set_number2)) #   <=>  " |"  
+print(set_number1 | set_number2) #   <=>  " |" 
+print(set_number1.intersection(set_number2)) #   <=>  " &"  
