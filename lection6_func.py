@@ -65,7 +65,6 @@ print(get_sum1(lambda x:x**3, 1, 2, 3, 4))
 x_3=lambda x:x**3
 print(get_sum1(x_3, 1, 2, 3, 4))
 
-
 # Визначення функції:
 def func2(*args, **kwargs):
     print(args)
@@ -99,3 +98,9 @@ def func4(list1=[]):
 
 print(func4([3,4,5,6]))
 print(name)
+print(type(func4([2,3,4])))
+print(func4([2,3,4])[0])
+# import lec7_def_as_parametres 
+from  mypackage.lec7_def_as_parametres import *
+print("Сума парних чисел:=",suma_number_flag(True,*[1,2,3,4,5,6,7,8,9]))
+print("Сума непарних чисел:=",suma_number_flag(False,*[1,2,3,4,5,6,7,8,9]))
